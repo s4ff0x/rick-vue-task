@@ -11,7 +11,7 @@
   width: 100%;
   color: white;
   gap: 1rem;
-  div {
+  div:not(.dots) {
     cursor: pointer;
   }
   .selected {

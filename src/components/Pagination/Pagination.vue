@@ -3,7 +3,7 @@
   <div class="wrapper">
     <div :class="{ selected: current === 1 }" @click="fetchPage(1)">1</div>
 
-    <div v-if="current > 2">...</div>
+    <div v-if="current > 3" class="dots">...</div>
     <div v-if="current > 2" @click="fetchPage(current - 1)">
       {{ current - 1 }}
     </div>
@@ -17,7 +17,7 @@
     <div v-if="current < pages - 1" @click="fetchPage(current + 1)">
       {{ current + 1 }}
     </div>
-    <div v-if="current < pages - 1">...</div>
+    <div v-if="current < pages - 2" class="dots">...</div>
 
     <div :class="{ selected: current === pages }" @click="fetchPage(pages)">
       {{ pages }}
